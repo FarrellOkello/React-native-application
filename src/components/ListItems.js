@@ -8,8 +8,9 @@ const ListItems = ({item, deleteItem}) => {
       <View style={styles.listItemView}>
         <Text style={styles.listItemText}>{item.text}</Text>
         <Icon
-          name="remove"
+          name="times-circle"
           fontSize="20"
+          size={20}
           color="firebrick"
           onPress={() => deleteItem(item.id)}
         />
