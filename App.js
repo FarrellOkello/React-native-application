@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, FlatList, Alert} from 'react-native';
+import {View, Text, StyleSheet, FlatList} from 'react-native';
 import uuid from 'react-uuid';
 import AddItem from './src/components/AddItem';
 import Header from './src/components/Header';
@@ -7,10 +7,10 @@ import ListItems from './src/components/ListItems';
 
 const App = () => {
   const [items, setItems] = useState([
-    {id: uuid(), text: 'Milk'},
-    {id: uuid(), text: 'Eggs'},
-    {id: uuid(), text: 'Bread'},
-    {id: uuid(), text: 'Soda'},
+    {id: uuid(), text: 'Bangalo'},
+    {id: uuid(), text: 'Condo'},
+    {id: uuid(), text: 'Rentals'},
+    {id: uuid(), text: 'Mizigo Express'},
   ]);
 
   const deleteItem = id => {
@@ -21,7 +21,7 @@ const App = () => {
 
   const addItem = text => {
     if (!text) {
-      Alert.alert('Error', 'PLease enter Project', {text: 'ok'});
+      alert('Please fill in a text');
     } else {
       setItems(prevItems => {
         return [...prevItems, {id: uuid(), text}];

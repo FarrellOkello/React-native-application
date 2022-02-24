@@ -10,7 +10,7 @@ const Header = ({title}) => {
 };
 
 Header.defaultProps = {
-  title: 'Cainning List',
+  title: 'Property Listings',
 };
 
 const styles = StyleSheet.create({
